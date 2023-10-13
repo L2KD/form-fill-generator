@@ -1,0 +1,24 @@
+{
+    "name": "Form Fill Generator",
+    "description": "Fill the inputs and copy to clipboard",
+    "version": "1.0",
+    "browser_action": {
+      "default_popup": "index.html"
+    },
+    "background":
+    {
+        "script": ["script/jquery-3.7.1.min.js", "script/constant-data.js", "script/script.js"]
+    },
+    "content_script": [
+        {
+            "matches":["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"],
+            "js":["script/jquery-3.7.1.min.js", "script/constant-data.js", "script/script.js"],
+            "css": ["css/style.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "manifest_version": 2
+  }
