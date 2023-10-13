@@ -31,6 +31,11 @@
     font-weight: bold;
     padding-left: 5px;
 }
+.input-g:focus {
+    background:#eaf1fb;
+    border-width: 2px;
+    border-color: #10417d;
+}
 select.input-g {
     cursor: pointer;
     color: #10417d;
@@ -42,18 +47,12 @@ select.input-g > option {
 select.input-g:hover {
     border-color: #E5E5E5;
 }
-select.input-g:focus {
-    background:#eaf1fb;
-}
 input.input-g {
     height: 30px;
     color: #10417d;
 }
 input.input-g:hover {
     border-color: #E5E5E5;
-}
-input.input-g:focus {
-    background:#eaf1fb;
 }
 .button-wrapper {
     width: 100%;
@@ -94,7 +93,7 @@ input.input-g:focus {
     border: solid 2px #c2e7ff;
     outline: none;
     font-size: 15px;
-    font-weight: bold;
+    color: #10417d;
     padding-left: 5px;
 }
 .form-generator-message {

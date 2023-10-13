@@ -78,8 +78,10 @@ $(function () {
                     } else if (inputItem.type === 'text') {
                         valueInput = $("#" + inputItem.id + '-text').val();
                     }
-
-                    resultStr += valueInput + "\n";
+                    resultStr += valueInput;
+                    if (i < listInputs.length - 1) {
+                        resultStr += "\n";
+                    }
                 }
                 $("#form-fill-result").val(resultStr);
                 $("#form-fill-result").select();
