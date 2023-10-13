@@ -4,6 +4,9 @@ $(function () {
     function getConfig(id) {
         return listInputs.find(item => item.id === id);
     }
+    $("#form-fill-result").click(function () {
+        $(this).select();
+    });
 
     function generateFormFill() {
         const formElement = $("#form-generator");
@@ -18,11 +21,11 @@ $(function () {
                         const listValue = inputItem.listValue;
                         elementStr = `<div class="input-wrapper" id="${inputItem.id + '-' + 'wrapper'}">
                             <span class="input-label" id="${inputItem.id + '-' + 'label'}">${inputItem.label}</span>
-                            <select class="input-label" id="${inputItem.id + '-' + 'select'}" data-item-id="${inputItem.id}">
+                            <select class="input-g" id="${inputItem.id + '-' + 'select'}" data-item-id="${inputItem.id}">
                         `;
                         for (let j = 0; j < listValue.length; j++) {
                             const selectData = listValue[j];
-                            elementStr += `<option class="input-g" value="${selectData.value}">${selectData.text}</option>`;
+                            elementStr += `<option value="${selectData.value}">${selectData.text}</option>`;
                         }
                         elementStr += `</select></div>`;
                     } else if (inputItem.type === 'text') {
@@ -41,7 +44,7 @@ $(function () {
                         if (config && config.textWhenValue === e.target.value) {
                             const listInput = config.listInput;
                             for (let j = 0; j < listInput.length; j++) {
-                                const inputElementStr = `<div><span>${listInput[j] + ': '}</span><input id="${config.id + '-input-' + j}" /></div>`;
+                                const inputElementStr = `<div><span class="input-label">${listInput[j] + ': '}</span><input class="input-g" id="${config.id + '-input-' + j}" /></div>`;
                                 wrapperElement.append(inputElementStr);
                             }
                             $("#" + config.id + '-input-' + 0).focus();
@@ -51,9 +54,10 @@ $(function () {
                     });
                 }
             }
-            const buttonElementStr = `<div class="button-copy" id="button-copy">
+            const buttonElementStr = `<div class="button-wrapper"><div class="button-copy" id="button-copy">
                     <i class="fa fa-paper-plane" aria-hidden="true"></i>
                     <span>Copy</span>
+                </div>
                 </div>`;
             formElement.append(buttonElementStr);
 
@@ -77,8 +81,14 @@ $(function () {
 
                     resultStr += valueInput + "\n";
                 }
-                console.log(resultStr);
+                $("#form-fill-result").val(resultStr);
+                $("#form-fill-result").select();
                 navigator.clipboard.writeText(resultStr);
+                $("#form-generator-message").css("display", "flex");
+                setTimeout(function () {
+                    $("#form-generator-message").css("display", "none");
+                }, 1000);
+
             })
         }
     }
