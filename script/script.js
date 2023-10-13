@@ -12,7 +12,6 @@ $(function () {
         const formElement = $("#form-generator");
         if (formElement) {
             formElement.children().remove();
-
             if (listInputs) {
                 for (let i = 0; i < listInputs.length; i++) {
                     const inputItem = listInputs[i];
@@ -54,11 +53,16 @@ $(function () {
                     });
                 }
             }
-            const buttonElementStr = `<div class="button-wrapper"><div class="button-copy" id="button-copy">
-                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                    <span>Copy</span>
+            const buttonElementStr = `<div class="button-wrapper">
+                <div class="button-copy" id="button-default">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <span>Defaulted Fail/Found</span>
                 </div>
-                </div>`;
+                <div class="button-copy" id="button-copy">
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <span>Copy to Clipboard</span>
+                </div>
+            </div>`;
             formElement.append(buttonElementStr);
 
             $("#button-copy").click(function () {
@@ -90,7 +94,14 @@ $(function () {
                 setTimeout(function () {
                     $("#form-generator-message").css("display", "none");
                 }, 1000);
-
+            });
+            $("#button-default").click(function () {
+                for (let i = 0; i < defaultFormValueWithFail.length; i++) {
+                    const wrapperElement = $("#" + defaultFormValueWithFail[i].id + '-' + 'wrapper');
+                    wrapperElement.children("div").remove();
+                    $("#" + defaultFormValueWithFail[i].id + "-select").val(defaultFormValueWithFail[i].defaultValue).change();
+                }
+                $("#" + defaultFormValueWithFail[0].id + "-input-0").focus();
             })
         }
     }

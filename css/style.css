@@ -60,26 +60,29 @@ input.input-g:hover {
     justify-content: center;
     align-items: center;
 }
+.button-wrapper > div {
+    margin-left: 7px;
+}
 .button-copy {
     border: solid 2px cornflowerblue;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: 250px;
     height: 30px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 7px 10px;
 }
 .button-copy:active {
     background: #c2e7ff;
 }
 .button-copy > i {
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(143, 73, 177);
 }
 .button-copy > span {
     font-size: 20px;
-    margin-left: 5px;
+    margin-left: 8px;
     font-family: karla, sans-serif;
 }
 .form-generator-result {

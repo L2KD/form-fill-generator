@@ -55,3 +55,14 @@ var listInputs = [
     {id: "input-additional-notesAdditional-notes", label: "* Additional Notes: ", type: "text", listValue: null, textWhenValue: null},
 ];
 
+var defaultFormValueWithFail = [
+    {id: "input-warn-list", defaultValue: "fail"},
+    {id: "input-duplicate-list", defaultValue: "found"},
+    {id: "input-subvertical-list", defaultValue: "account-auditing"},
+    {id: "input-primary-ưebsite-provided-list", defaultValue: "no"},
+    {id: "input-domains-active-list", defaultValue: "no"},
+    {id: "input-domain-connections-list", defaultValue: "no"},
+    {id: "input-google-search-results-list", defaultValue: "fail"},
+    {id: "input-fraud-indicators-list", defaultValue: "found"},
+];
+
