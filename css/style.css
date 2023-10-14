@@ -26,6 +26,15 @@
     text-align: right;
     min-width: 220px;
 }
+.input-label-short {
+    font-size: 17px;
+    font-family: karla, sans-serif;
+    color: #10417d;
+    white-space: nowrap;
+    width: 170px;
+    text-align: right;
+    min-width: 170px;
+}
 .input-g {
     margin-left: 10px;
     height: 30px;

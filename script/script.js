@@ -135,9 +135,9 @@ $(function () {
                         const wrapperElement = $("#" + inputItem.id + '-' + 'wrapper');
                         if (config && config.textWhenValue === e.target.value) {
                             const listInput = config.listInput;
-                            let inputElementStr = `<div name="input-g-wrapper" style="margin-left: 50px;">`;
+                            let inputElementStr = `<div name="input-g-wrapper">`;
                             for (let j = 0; j < listInput.length; j++) {
-                                inputElementStr += `<div style="margin-top: 5px; display: flex; align-items: center;"><span class="input-label">${listInput[j] + ': '}</span><input class="input-g" id="${config.id + '-input-' + j}" /></div>`;
+                                inputElementStr += `<div style="margin-top: 5px; display: flex; align-items: center;"><span class="input-label-short">${listInput[j] + ': '}</span><input class="input-g" id="${config.id + '-input-' + j}" /></div>`;
                             }
                             inputElementStr += `</div>`
                             wrapperElement.append(inputElementStr);
