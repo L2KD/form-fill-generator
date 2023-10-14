@@ -2,14 +2,40 @@
 <html>
 <head>
     <title>Form Fill Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./script/jquery-3.7.1.min.js"></script>
     <script src="./script/constant-data.js"></script>
     <script src="./script/script.js"></script>
 </head>
 <body>
-    <div class="form-generator" id="form-generator">
-
+    <div class="form-generator" id="form-generator"></div>
+    <div class="button-wrapper">
+<!--        <div class="button-copy" id="button-zoom-in">-->
+<!--            <i class="fa fa-minus" aria-hidden="true"></i>-->
+<!--            <span>Zoom out</span>-->
+<!--        </div>-->
+<!--        <div class="button-copy" id="button-zoom-out">-->
+<!--            <i class="fa fa-plus" aria-hidden="true"></i>-->
+<!--            <span>Zoom in</span>-->
+<!--        </div>-->
+        <div class="button-copy" id="button-default-pass">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <span>Default Pass/Clear</span>
+        </div>
+        <div class="button-copy" id="button-default-fail">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <span>Default Fail/Found</span>
+        </div>
+        <div class="button-copy" id="button-copy">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            <span>Copy to Clipboard</span>
+        </div>
+    </div>
+    <div class="form-generator-result" id="form-generator-message" style="display: none"><span class="form-generator-message">Your form is copied to clipboard!</span></div>
+    <div class="form-generator-result">
+        <textarea class="input-result" id="form-fill-result" rows="10">
+        </textarea>
     </div>
 </body>
 </html>

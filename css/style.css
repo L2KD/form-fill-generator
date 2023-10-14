@@ -1,0 +1,109 @@
+@font-face {
+    font-family: karla;
+    src: url("../resources/Karla-Regular.ttf");
+}
+
+.form-generator {
+
+}
+
+.input-wrapper {
+    display: flex;
+    margin: 5px 0 5px 0;
+    align-items: center;
+}
+.input-wrapper > div {
+    display: flex;
+    align-items: center;
+}
+
+.input-label {
+    font-size: 17px;
+    font-family: karla, sans-serif;
+    color: #10417d;
+    white-space: nowrap;
+}
+.input-g {
+    margin-left: 5px;
+    height: 30px;
+    border: solid 2px #c2e7ff;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.input-g:focus {
+    background:#eaf1fb;
+    border-width: 2px;
+    border-color: #10417d;
+}
+select.input-g {
+    cursor: pointer;
+    color: #10417d;
+}
+select.input-g > option {
+    color: #10417d;
+    margin-left: 5px;
+}
+select.input-g:hover {
+    border-color: #E5E5E5;
+}
+input.input-g {
+    width: 700px;
+    height: 30px;
+    color: #10417d;
+}
+input.input-g:hover {
+    border-color: #E5E5E5;
+}
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-wrapper > div {
+    margin-left: 7px;
+}
+.button-copy {
+    border: solid 2px cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+    cursor: pointer;
+    padding: 7px 10px;
+}
+.button-copy:active {
+    background: #c2e7ff;
+}
+.button-copy > i {
+    font-size: 25px;
+    color: #10417d;
+}
+.button-copy > span {
+    font-size: 20px;
+    margin-left: 8px;
+    font-family: karla, sans-serif;
+}
+.form-generator-result {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-result {
+    width: 90%;
+    border: solid 2px #c2e7ff;
+    outline: none;
+    font-size: 15px;
+    color: #10417d;
+    padding-left: 5px;
+}
+.form-generator-message {
+    font-family: karla, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(167, 48, 57);
+}
