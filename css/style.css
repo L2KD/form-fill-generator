@@ -36,7 +36,7 @@
     padding-left: 5px;
 }
 .input-g:focus {
-    background:#eaf1fb;
+    background: #eaf1fb;
     border-width: 2px;
     border-color: #10417d;
 }
@@ -81,9 +81,10 @@ input.input-g:hover {
     height: 30px;
     cursor: pointer;
     padding: 7px 10px;
+    background: #c2e7ff;
 }
 .button-copy:active {
-    background: #c2e7ff;
+    filter: brightness(0.7);
 }
 .button-copy > i {
     font-size: 25px;
@@ -107,6 +108,7 @@ input.input-g:hover {
     font-size: 15px;
     color: #10417d;
     padding-left: 5px;
+    background: #eaf1fb;
 }
 .form-generator-message {
     font-family: karla, sans-serif;
