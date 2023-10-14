@@ -75,7 +75,7 @@ $(function () {
             const wrapperElement = $("#" + defaultFormValueWithPass[i].id + '-' + 'wrapper');
             wrapperElement.children("div[name=input-g-wrapper]").remove();
             $("#" + defaultFormValueWithPass[i].id + "-select").val(defaultFormValueWithPass[i].defaultValue).change();
-            $("#" + defaultFormValueWithFail[i].id + "-search").val(defaultFormValueWithFail[i].defaultValue).change();
+            $("#" + defaultFormValueWithPass[i].id + "-search").val(defaultFormValueWithPass[i].defaultValue).change();
         }
         // $("#" + defaultFormValueWithPass[defaultFormValueWithPass.length - 1].id + "-text").focus();
     });
