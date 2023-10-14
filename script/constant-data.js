@@ -194,7 +194,7 @@ var listInputs = [
 var defaultFormValueWithFail = [
     {id: "input-warn-list", defaultValue: "Fail: "},
     {id: "input-duplicate-list", defaultValue: "Found: "},
-    {id: "input-subvertical-list", defaultValue: "Accounting & Auditing"},
+    {id: "input-subvertical-list", defaultValue: "OOS"},
     {id: "input-primary-ưebsite-provided-list", defaultValue: "No"},
     {id: "input-domains-active-list", defaultValue: "No - Broken (); Parked (); Invalid Format ()"},
     {id: "input-domain-connections-list", defaultValue: "No - Mismatching Name ()"},
@@ -205,7 +205,7 @@ var defaultFormValueWithFail = [
 var defaultFormValueWithPass = [
     {id: "input-warn-list", defaultValue: "Clear"},
     {id: "input-duplicate-list", defaultValue: "Found"},
-    {id: "input-subvertical-list", defaultValue: "Accounting & Auditing"},
+    {id: "input-subvertical-list", defaultValue: "OOS"},
     {id: "input-primary-ưebsite-provided-list", defaultValue: "Yes"},
     {id: "input-domains-active-list", defaultValue: "Yes"},
     {id: "input-domain-connections-list", defaultValue: "Yes"},
