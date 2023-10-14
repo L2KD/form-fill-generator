@@ -53,8 +53,8 @@ select.input-g {
     cursor: pointer;
     color: #10417d;
     height: 38px;
-    width: 200px;
-    min-width: 200px;
+    width: 560px;
+    min-width: 560px;
 }
 select.input-g > option {
     color: #10417d;
@@ -66,19 +66,19 @@ select.input-g:hover {
 input.input-g {
     height: 30px;
     color: #10417d;
-    width: 189px;
-    min-width: 189px;
+    width: 550px;
+    min-width: 550px;
 }
 input.input-g:hover {
     border-color: #E5E5E5;
 }
 .button-wrapper {
-    width: 500px;
+    width: 790px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    /*flex-direction: column;*/
 }
 .button-wrapper > div {
     margin-left: 7px;

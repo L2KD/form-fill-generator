@@ -180,36 +180,36 @@ var listFraudIndicatorsList = [
 ];
 
 var listInputs = [
-    {id: "input-warn-list", label: "* Warn Lists: ", type: "select", listValue: listWarnList, textWhenValue: "fail", valueFormat: "Fail: {0}", listInput: ['Fail']},
-    {id: "input-duplicate-list", label: "* Duplicates: ", type: "select", listValue: listDuplicateList, textWhenValue: "found", valueFormat: "Found: {0}", listInput: ['Found']},
+    {id: "input-warn-list", label: "* Warn Lists: ", type: "search", listValue: listWarnList, textWhenValue: "fail", valueFormat: "Fail: {0}", listInput: ['Fail']},
+    {id: "input-duplicate-list", label: "* Duplicates: ", type: "search", listValue: listDuplicateList, textWhenValue: "found", valueFormat: "Found: {0}", listInput: ['Found']},
     {id: "input-subvertical-list", label: "* Subvertical(s): ", type: "search", listValue: listSubverticalList, textWhenValue: null, valueFormat: "none", listInput: null},
     {id: "input-primary-website-provided-list", label: "* Primary Website Provided: ", type: "select", listValue: listPrimaryWebsiteProvidedList, textWhenValue: null, valueFormat: "none", listInput: null},
-    {id: "input-domains-active-list", label: "* Domains Active: ", type: "select", listValue: listDomainsActiveList, textWhenValue: "no", valueFormat: "No - Broken ({0}); Parked ({1}); Invalid Format ({2})", listInput: ['Broken', 'Parked', 'Invalid Format']},
-    {id: "input-domain-connections-list", label: "* Domain Connections: ", type: "select", listValue: listDomainConnectionsList, textWhenValue: "no", valueFormat: "No - Mismatching Name ({0})", listInput: ['Mismatching Name']},
-    {id: "input-google-search-results-list", label: "* Google Search Results: ", type: "select", listValue: listGoogleSearchResultsList, textWhenValue: null, valueFormat: "none", listInput: null},
-    {id: "input-fraud-indicators-list", label: "* Fraud Indicators: ", type: "select", listValue: listFraudIndicatorsList, textWhenValue: "found", valueFormat: "Found: {0}", listInput: ['Found']},
+    {id: "input-domains-active-list", label: "* Domains Active: ", type: "search", listValue: listDomainsActiveList, textWhenValue: "no", valueFormat: "No - Broken ({0}); Parked ({1}); Invalid Format ({2})", listInput: ['Broken', 'Parked', 'Invalid Format']},
+    {id: "input-domain-connections-list", label: "* Domain Connections: ", type: "search", listValue: listDomainConnectionsList, textWhenValue: "no", valueFormat: "No - Mismatching Name ({0})", listInput: ['Mismatching Name']},
+    {id: "input-google-search-results-list", label: "* Google Search Results: ", type: "search", listValue: listGoogleSearchResultsList, textWhenValue: null, valueFormat: "none", listInput: null},
+    {id: "input-fraud-indicators-list", label: "* Fraud Indicators: ", type: "search", listValue: listFraudIndicatorsList, textWhenValue: "found", valueFormat: "Found: {0}", listInput: ['Found']},
     {id: "input-additional-notes-additional-notes", label: "* Additional Notes: ", type: "text", listValue: null, textWhenValue: null},
 ];
 
 var defaultFormValueWithFail = [
-    {id: "input-warn-list", defaultValue: "fail"},
-    {id: "input-duplicate-list", defaultValue: "found"},
+    {id: "input-warn-list", defaultValue: "Fail: "},
+    {id: "input-duplicate-list", defaultValue: "Found: "},
     {id: "input-subvertical-list", defaultValue: "OOS"},
     {id: "input-primary-website-provided-list", defaultValue: "no"},
-    {id: "input-domains-active-list", defaultValue: "no"},
-    {id: "input-domain-connections-list", defaultValue: "no"},
-    {id: "input-google-search-results-list", defaultValue: "fail"},
-    {id: "input-fraud-indicators-list", defaultValue: "found"},
+    {id: "input-domains-active-list", defaultValue: "No - Broken (); Parked (); Invalid Format ()"},
+    {id: "input-domain-connections-list", defaultValue: "No - Mismatching Name ()"},
+    {id: "input-google-search-results-list", defaultValue: "Fail"},
+    {id: "input-fraud-indicators-list", defaultValue: "Found: "},
 ];
 
 var defaultFormValueWithPass = [
-    {id: "input-warn-list", defaultValue: "clear"},
-    {id: "input-duplicate-list", defaultValue: "clear"},
+    {id: "input-warn-list", defaultValue: "Clear"},
+    {id: "input-duplicate-list", defaultValue: "Clear"},
     {id: "input-subvertical-list", defaultValue: "OOS"},
     {id: "input-primary-website-provided-list", defaultValue: "yes"},
-    {id: "input-domains-active-list", defaultValue: "yes"},
-    {id: "input-domain-connections-list", defaultValue: "yes"},
-    {id: "input-google-search-results-list", defaultValue: "pass"},
-    {id: "input-fraud-indicators-list", defaultValue: "clear"},
+    {id: "input-domains-active-list", defaultValue: "Yes"},
+    {id: "input-domain-connections-list", defaultValue: "Yes"},
+    {id: "input-google-search-results-list", defaultValue: "Pass"},
+    {id: "input-fraud-indicators-list", defaultValue: "Clear"},
 ];
 
