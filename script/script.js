@@ -64,7 +64,7 @@ $(function () {
     $("#button-default-fail").click(function () {
         for (let i = 0; i < defaultFormValueWithFail.length; i++) {
             const wrapperElement = $("#" + defaultFormValueWithFail[i].id + '-' + 'wrapper');
-            wrapperElement.children("div").remove();
+            wrapperElement.children("div[name=input-g-wrapper]").remove();
             $("#" + defaultFormValueWithFail[i].id + "-select").val(defaultFormValueWithFail[i].defaultValue).change();
             $("#" + defaultFormValueWithFail[i].id + "-search").val(defaultFormValueWithFail[i].defaultValue);
         }
@@ -73,7 +73,7 @@ $(function () {
     $("#button-default-pass").click(function () {
         for (let i = 0; i < defaultFormValueWithPass.length; i++) {
             const wrapperElement = $("#" + defaultFormValueWithPass[i].id + '-' + 'wrapper');
-            wrapperElement.children("div").remove();
+            wrapperElement.children("div[name=input-g-wrapper]").remove();
             $("#" + defaultFormValueWithPass[i].id + "-select").val(defaultFormValueWithPass[i].defaultValue).change();
             $("#" + defaultFormValueWithFail[i].id + "-search").val(defaultFormValueWithFail[i].defaultValue).change();
         }
@@ -101,7 +101,7 @@ $(function () {
                     if (inputItem.type === 'select') {
                         const listValue = inputItem.listValue;
                         elementStr = `<div class="input-wrapper" id="${inputItem.id + '-' + 'wrapper'}">
-                            <span class="input-label" id="${inputItem.id + '-' + 'label'}">${inputItem.label}</span>
+                            <div class="input-label"><span>${inputItem.label}</span></div>
                             <select class="input-g" id="${inputItem.id + '-' + 'select'}" data-item-id="${inputItem.id}">
                         `;
                         for (let j = 0; j < listValue.length; j++) {
@@ -112,13 +112,13 @@ $(function () {
                     } else if (inputItem.type === 'text') {
                         elementStr = `
                         <div class="input-wrapper">
-                            <span class="input-label">${inputItem.label}</span>
+                            <div class="input-label"><span class="input-label">${inputItem.label}</span></div>
                             <input class="input-g" id="${inputItem.id + '-' + 'text'}" />
                         </div>`;
                     } else if (inputItem.type === 'search') {
                         const listValue = inputItem.listValue;
                         elementStr = `<div class="input-wrapper" id="${inputItem.id + '-' + 'wrapper'}">
-                            <span class="input-label" id="${inputItem.id + '-' + 'label'}">${inputItem.label}</span>
+                            <div class="input-label"><span class="input-label">${inputItem.label}</span></div>
                             <input class="input-g" list="${inputItem.id + '-' + 'data-list'}" id="${inputItem.id + '-' + 'search'}" data-item-id="${inputItem.id}"><datalist id="${inputItem.id + '-' + 'data-list'}" >
                         `;
                         for (let j = 0; j < listValue.length; j++) {
@@ -135,15 +135,15 @@ $(function () {
                         const wrapperElement = $("#" + inputItem.id + '-' + 'wrapper');
                         if (config && config.textWhenValue === e.target.value) {
                             const listInput = config.listInput;
-                            let inputElementStr = `<div>`;
+                            let inputElementStr = `<div name="input-g-wrapper" style="margin-left: 50px;">`;
                             for (let j = 0; j < listInput.length; j++) {
-                                inputElementStr += `<div style="margin-top: 5px"><span class="input-label">${listInput[j] + ': '}</span><input class="input-g" id="${config.id + '-input-' + j}" /></div>`;
+                                inputElementStr += `<div style="margin-top: 5px; display: flex; align-items: center;"><span class="input-label">${listInput[j] + ': '}</span><input class="input-g" id="${config.id + '-input-' + j}" /></div>`;
                             }
                             inputElementStr += `</div>`
                             wrapperElement.append(inputElementStr);
                             $("#" + config.id + '-input-' + 0).focus();
                         } else {
-                            wrapperElement.children("div").remove();
+                            wrapperElement.children("div[name=input-g-wrapper]").remove();
                         }
                     });
                 }
