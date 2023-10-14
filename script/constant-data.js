@@ -161,7 +161,7 @@ var listPrimaryWebsiteProvidedList = [
 
 var listDomainsActiveList = [
     {text: "Yes", value: "yes"},
-    {text: "No - Broken (); Parked (); Invalid Format ()", value: "no"},
+    {text: "No", value: "no"},
 ];
 
 var listDomainConnectionsList = [
