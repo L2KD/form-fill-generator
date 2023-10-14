@@ -135,10 +135,12 @@ $(function () {
                         const wrapperElement = $("#" + inputItem.id + '-' + 'wrapper');
                         if (config && config.textWhenValue === e.target.value) {
                             const listInput = config.listInput;
+                            let inputElementStr = `<div>`;
                             for (let j = 0; j < listInput.length; j++) {
-                                const inputElementStr = `<div><span class="input-label">${listInput[j] + ': '}</span><input class="input-g" id="${config.id + '-input-' + j}" /></div>`;
-                                wrapperElement.append(inputElementStr);
+                                inputElementStr += `<div style="margin-top: 5px"><span class="input-label">${listInput[j] + ': '}</span><input class="input-g" id="${config.id + '-input-' + j}" /></div>`;
                             }
+                            inputElementStr += `</div>`
+                            wrapperElement.append(inputElementStr);
                             $("#" + config.id + '-input-' + 0).focus();
                         } else {
                             wrapperElement.children("div").remove();
