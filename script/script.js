@@ -90,6 +90,11 @@ $(function () {
         chrome.storage.local.set({ 'zoom': zoom });
     });
 
+    function autoResize(textarea) {
+        textarea.style.height = 'auto'; // Reset the height to auto
+        textarea.style.height = (textarea.scrollHeight) + 'px'; // Set the height to the scroll height
+    }
+
     function generateFormFill() {
         const formElement = $("#form-generator");
         if (formElement) {
@@ -113,7 +118,7 @@ $(function () {
                         elementStr = `
                         <div class="input-wrapper">
                             <div class="input-label"><span class="input-label">${inputItem.label}</span></div>
-                            <input class="input-g" id="${inputItem.id + '-' + 'text'}" />
+                            <textarea class="input-g" id="${inputItem.id + '-' + 'text'}"></textarea>
                         </div>`;
                     } else if (inputItem.type === 'search') {
                         const listValue = inputItem.listValue;
@@ -145,6 +150,9 @@ $(function () {
                         } else {
                             wrapperElement.children("div[name=input-g-wrapper]").remove();
                         }
+                    });
+                    $("#" + inputItem.id + '-' + 'text').on( "input", function() {
+                        autoResize(this);
                     });
                 }
             }
